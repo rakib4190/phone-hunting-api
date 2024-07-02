@@ -85,4 +85,4 @@ const loadingSpinner = (isLoading) =>{
     }
 }
 
-loadPhone();
+loadPhone('iphone');
