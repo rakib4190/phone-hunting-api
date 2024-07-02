@@ -17,12 +17,19 @@
         <button onclick="searchPhone()" class="btn btn-accent mt-5">Search</button>
       </div>
       <!-- search result -->
-
-      <!-- phone container  -->
+      
       <section>
+        <!-- loading spinner  -->
+        <div id="loading-spinner" class="text-center mt-40 hidden">
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
+        <!-- phone container  -->
         <div id="phone-container" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
       </section>
-      <div id="show-button-conatiner" class="hidden"><button onclick="" class="btn btn-accent">Show All</button></div>
+      <!-- search  -->
+      <div id="show-button-conatiner" class="hidden mt-5">
+        <button onclick="" class="btn btn-accent">Show All-></button>
+      </div>
     </main>
     <footer></footer>
     <script src="./js/phone.js"></script>

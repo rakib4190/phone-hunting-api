@@ -38,11 +38,22 @@ const displayPhones = phones =>{
         phonesContainer.appendChild(phoneCard);
         
     });
+    loadingSpinner(false);
 }
 const searchPhone = () =>{
+    loadingSpinner(true);
     const searchField = document.getElementById('input-field');
     const searchText =searchField.value;
     console.log(searchText);
     loadPhone(searchText);
+}
+const loadingSpinner = (isLoading) =>{
+    const loading = document.getElementById('loading-spinner');
+    if(isLoading){
+        loading.classList.remove('hidden');
+    }
+    else{
+        loading.classList.add('hidden');
+    }
 }
 
