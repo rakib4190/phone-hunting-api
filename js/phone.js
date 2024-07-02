@@ -8,6 +8,14 @@ const displayPhones = phones =>{
     // console.log(phones);
     const phonesContainer = document.getElementById('phone-container');
     phonesContainer.textContent ='';
+    showButtonContainer = document.getElementById('show-button-conatiner');
+    if(phones.length > 12 ){
+        showButtonContainer.classList.remove('hidden');
+    }
+    else{
+        showButtonContainer.classList.add('hidden');
+    }
+    phones = phones.slice(0,12);
     phones.forEach(phone => {
         console.log(phone)
         const phoneCard = document.createElement('div');
@@ -36,6 +44,5 @@ const searchPhone = () =>{
     const searchText =searchField.value;
     console.log(searchText);
     loadPhone(searchText);
-
 }
 
